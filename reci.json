@@ -1,0 +1,158 @@
+{
+  "hrana": {
+    "naziv": "Hrana i piće",
+    "ikonica": "🍽",
+    "parovi": [
+      { "rec": "burek", "hint": "pita" },
+      { "rec": "ćevapi", "hint": "pljeskavica" },
+      { "rec": "rakija", "hint": "loza" },
+      { "rec": "ajvar", "hint": "pinđur" },
+      { "rec": "kajmak", "hint": "pavlaka" },
+      { "rec": "sarma", "hint": "podvarak" },
+      { "rec": "gibanica", "hint": "zeljanica" },
+      { "rec": "musaka", "hint": "đuveč" },
+      { "rec": "pasulj", "hint": "prebranac" },
+      { "rec": "karađorđeva", "hint": "bečka šnicla" },
+      { "rec": "proja", "hint": "lepinja" },
+      { "rec": "baklava", "hint": "tulumba" },
+      { "rec": "vino", "hint": "pivo" },
+      { "rec": "jagnjetina", "hint": "prasetina" },
+      { "rec": "supa", "hint": "čorba" },
+      { "rec": "pekmez", "hint": "slatko" },
+      { "rec": "somun", "hint": "lepinja" },
+      { "rec": "krempita", "hint": "šampita" },
+      { "rec": "urnebes", "hint": "kajmak" },
+      { "rec": "kafa", "hint": "espreso" }
+    ]
+  },
+  "mesta": {
+    "naziv": "Mesta u Srbiji",
+    "ikonica": "📍",
+    "parovi": [
+      { "rec": "Beograd", "hint": "Novi Sad" },
+      { "rec": "Kalemegdan", "hint": "Petrovaradin" },
+      { "rec": "Kopaonik", "hint": "Zlatibor" },
+      { "rec": "Ada Ciganlija", "hint": "Štrand" },
+      { "rec": "Niš", "hint": "Kragujevac" },
+      { "rec": "Subotica", "hint": "Sombor" },
+      { "rec": "Tara", "hint": "Fruška gora" },
+      { "rec": "Đerdap", "hint": "Drina" },
+      { "rec": "Skadarlija", "hint": "Knez Mihailova" },
+      { "rec": "Avala", "hint": "Košutnjak" },
+      { "rec": "Studenica", "hint": "Žiča" },
+      { "rec": "Soko Banja", "hint": "Vrnjačka Banja" },
+      { "rec": "Užice", "hint": "Čačak" },
+      { "rec": "Vršac", "hint": "Pančevo" },
+      { "rec": "Sremski Karlovci", "hint": "Sremska Mitrovica" }
+    ]
+  },
+  "licnosti": {
+    "naziv": "Poznate ličnosti",
+    "ikonica": "👤",
+    "parovi": [
+      { "rec": "Novak Đoković", "hint": "Janko Tipsarević" },
+      { "rec": "Ceca Ražnatović", "hint": "Lepa Brena" },
+      { "rec": "Nikola Tesla", "hint": "Mihajlo Pupin" },
+      { "rec": "Ivo Andrić", "hint": "Miloš Crnjanski" },
+      { "rec": "Dragan Stojković", "hint": "Dejan Savićević" },
+      { "rec": "Toma Zdravković", "hint": "Šaban Šaulić" },
+      { "rec": "Vlade Divac", "hint": "Predrag Stojaković" },
+      { "rec": "Aca Lukas", "hint": "Mile Kitić" },
+      { "rec": "Karađorđe", "hint": "Miloš Obrenović" },
+      { "rec": "Dušan Silni", "hint": "Stefan Nemanja" },
+      { "rec": "Đorđe Balašević", "hint": "Bajaga" },
+      { "rec": "Zdravko Čolić", "hint": "Oliver Mandić" },
+      { "rec": "Jelena Janković", "hint": "Ana Ivanović" },
+      { "rec": "Bora Stanković", "hint": "Branislav Nušić" }
+    ]
+  },
+  "filmovi": {
+    "naziv": "Filmovi i serije",
+    "ikonica": "🎬",
+    "parovi": [
+      { "rec": "Maratonci trče počasni krug", "hint": "Ko to tamo peva" },
+      { "rec": "Bela lađa", "hint": "Srećni ljudi" },
+      { "rec": "Tesna koža", "hint": "Lude godine" },
+      { "rec": "Žikina dinastija", "hint": "Vruć vetar" },
+      { "rec": "Otvorena vrata", "hint": "Porodično blago" },
+      { "rec": "Crna mačka beli mačor", "hint": "Underground" },
+      { "rec": "Klopka", "hint": "Munje" },
+      { "rec": "Profesionalac", "hint": "Rane" },
+      { "rec": "Balkanski špijun", "hint": "Mi nismo anđeli" },
+      { "rec": "Senke nad Balkanom", "hint": "Ubice mog oca" },
+      { "rec": "Boj na Kosovu", "hint": "Sveti Georgije ubiva aždahu" },
+      { "rec": "Montevideo bog te video", "hint": "Toma" }
+    ]
+  },
+  "sport": {
+    "naziv": "Sport",
+    "ikonica": "⚽",
+    "parovi": [
+      { "rec": "košarka", "hint": "odbojka" },
+      { "rec": "Partizan", "hint": "Crvena Zvezda" },
+      { "rec": "fudbal", "hint": "rukomet" },
+      { "rec": "vaterpolo", "hint": "plivanje" },
+      { "rec": "tenis", "hint": "stoni tenis" },
+      { "rec": "Marakana", "hint": "Banjica" },
+      { "rec": "Štark Arena", "hint": "Pionir" },
+      { "rec": "trener", "hint": "sudija" },
+      { "rec": "navijač", "hint": "huligan" },
+      { "rec": "Davis kup", "hint": "Liga šampiona" },
+      { "rec": "Grobari", "hint": "Delije" },
+      { "rec": "tekma", "hint": "derbi" }
+    ]
+  },
+  "svakodnevica": {
+    "naziv": "Svakodnevni život",
+    "ikonica": "🏠",
+    "parovi": [
+      { "rec": "pijaca", "hint": "market" },
+      { "rec": "kafana", "hint": "birtija" },
+      { "rec": "prodavnica", "hint": "butik" },
+      { "rec": "kuća", "hint": "stan" },
+      { "rec": "škola", "hint": "fakultet" },
+      { "rec": "bolnica", "hint": "dom zdravlja" },
+      { "rec": "pošta", "hint": "banka" },
+      { "rec": "frizer", "hint": "berberin" },
+      { "rec": "autobus", "hint": "tramvaj" },
+      { "rec": "taksi", "hint": "kombi" },
+      { "rec": "komšija", "hint": "rođak" },
+      { "rec": "tezga", "hint": "radnja" },
+      { "rec": "ulica", "hint": "bulevar" },
+      { "rec": "park", "hint": "trg" },
+      { "rec": "apoteka", "hint": "drogerija" }
+    ]
+  },
+  "praznici": {
+    "naziv": "Praznici i običaji",
+    "ikonica": "🎉",
+    "parovi": [
+      { "rec": "slava", "hint": "krsno ime" },
+      { "rec": "Božić", "hint": "Vaskrs" },
+      { "rec": "Đurđevdan", "hint": "Spasovdan" },
+      { "rec": "badnjak", "hint": "česnica" },
+      { "rec": "Nova godina", "hint": "Stara nova godina" },
+      { "rec": "Sveti Sava", "hint": "Vidovdan" },
+      { "rec": "krštenje", "hint": "venčanje" },
+      { "rec": "kum", "hint": "stari svat" },
+      { "rec": "kolač", "hint": "žito" },
+      { "rec": "molba", "hint": "blagoslov" }
+    ]
+  },
+  "popkultura": {
+    "naziv": "Pop kultura",
+    "ikonica": "🎤",
+    "parovi": [
+      { "rec": "Zvezde Granda", "hint": "Pinkove zvezde" },
+      { "rec": "Veliki brat", "hint": "Zadruga" },
+      { "rec": "turbofolk", "hint": "narodnjaci" },
+      { "rec": "splav", "hint": "klub" },
+      { "rec": "Exit", "hint": "Lovefest" },
+      { "rec": "Guča", "hint": "Beer Fest" },
+      { "rec": "Pink", "hint": "Prva" },
+      { "rec": "Kurir", "hint": "Blic" },
+      { "rec": "MTS", "hint": "Telenor" },
+      { "rec": "Idemo uživo", "hint": "Magazin in" }
+    ]
+  }
+}
