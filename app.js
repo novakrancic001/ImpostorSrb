@@ -326,7 +326,7 @@ function renderMainMenu(app) {
   app.innerHTML = `
     <section class="screen main-menu">
       <div class="menu-hero">
-        <img src="images/uljez%20-%20favicon.png" alt="Uljez" class="menu-logo">
+        <img src="images/uljez-transparent-favicon.png" alt="Uljez" class="menu-logo">
         <span class="eyebrow">Srpska igra reči</span>
         <h1 class="menu-title display">Uljez</h1>
         <p class="menu-tagline">Pronađi uljeza</p>
