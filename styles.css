@@ -95,12 +95,16 @@ body {
   max-width: 520px;
   margin: 0 auto;
   width: 100%;
-  animation: fadeIn 0.4s ease-out;
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Okida se samo pri pravoj navigaciji — dodaje se iz JS-a */
+.page-enter {
+  animation: fadeIn 0.4s ease-out;
 }
 
 /* ==========================================================================
@@ -939,6 +943,13 @@ input[type="range"]::-moz-range-thumb {
   letter-spacing: 0.04em;
 }
 
+.menu-logo {
+  height: 72px;
+  width: auto;
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
 .menu-cta {
   display: flex;
   flex-direction: column;
@@ -1010,7 +1021,6 @@ input[type="range"]::-moz-range-thumb {
   max-width: 520px;
   margin: 0 auto;
   width: 100%;
-  animation: fadeIn 0.3s ease-out;
   padding-top: env(safe-area-inset-top, 0px);
   padding-bottom: calc(env(safe-area-inset-bottom, 0px) + var(--space-8));
 }
@@ -1045,13 +1055,10 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .page-header-logo {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--accent);
-  font-variation-settings: 'opsz' 144;
-  text-align: center;
+  display: block;
+  height: 28px;
+  width: auto;
+  margin: 0 auto;
 }
 
 .content-body {

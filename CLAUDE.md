@@ -46,10 +46,17 @@ impostor/
 ├── index.html          # Entry point, postavlja meta i Google Fonts
 ├── styles.css          # Sav stil, mobile-first, dark theme
 ├── app.js              # Game logika, state, rendering svih ekrana
+├── content.js          # HTML sadržaj za statičke stranice (CONTENT objekat)
 ├── reci.json           # Baza reči po kategorijama
+├── robots.txt          # SEO — dozvoljava sve, Sitemap link
+├── sitemap.xml         # SEO — jedan unos (hash routing ograničenje)
+├── .gitignore          # Ignoriše OS, editor i Node fajlove
+├── images/
+│   └── uljez - favicon.png   # Logo/favicon (500x500px PNG)
 ├── README.md           # Korisničko uputstvo (kako pokrenuti)
 ├── CLAUDE.md           # ← OVAJ FAJL — kontekst za Claude Code
-└── DOKUMENTACIJA.md    # Tehnička dokumentacija funkcija (live, ažurira se)
+└── dokumentacija/
+    └── DOKUMENTACIJA.md    # Tehnička dokumentacija funkcija (live, ažurira se)
 ```
 
 Ne dodavaj `node_modules`, `package.json`, build foldere — ovaj projekat je čist.
@@ -108,7 +115,7 @@ Svaka logička "stranica" treba unique title i description. Pošto je SPA, ovo r
 ### ✅ Faza 1 — MVP (završeno)
 Core igra radi: setup ekran, hold-to-reveal, diskusija sa tajmerom, rezultati. 108 parova u 8 kategorija.
 
-### 🔄 Faza 2 — Content i polish (TRENUTNO)
+### ✅ Faza 2 — Content i polish (uglavnom završeno — ostaje samo polish)
 **Cilj:** dovršiti aplikaciju kao "pravu" — sa svim stranicama koje očekuje korisnik i SEO-om.
 
 Pogledaj `## TODO` ispod za konkretne zadatke.
@@ -145,13 +152,13 @@ Prioritet visok ka niskom. Označi `[x]` kad završiš.
 - [x] **Dinamičko ažuriranje title-a i description-a** po stranici
 - [x] **`<meta property="og:*">`** za Open Graph (WhatsApp/Facebook preview)
 - [x] **`<meta name="twitter:*">`** za Twitter card preview
-- [ ] **`robots.txt`** i **`sitemap.xml`**
-- [ ] **Strukturirani podaci (JSON-LD)** za WebApplication schema
+- [x] **`robots.txt`** i **`sitemap.xml`**
+- [x] **Strukturirani podaci (JSON-LD)** za WebApplication schema
 - [ ] **`lang="sr"` provera svuda**, `hreflang` ako bude potrebe za regionom
 
 ### Polish core iskustva
 - [x] **Onboarding modal** pri prvom otvaranju — kratak walkthrough (3 koraka), skipovljiv, ne pojavljuje se ponovo (localStorage flag)
-- [ ] **Bolje animacije prelaza** između ekrana (slide ili crossfade umesto puki fadeIn)
+- [x] **Bolje animacije prelaza** — `.page-enter` klasa, animacija se okida samo pri pravoj navigaciji (ne pri re-renderu istog ekrana)
 - [ ] **Reveal animacija reči** — slovo-po-slovo ili fade scale, da bude "drama" momenat
 - [ ] **Mode kategorija "Family friendly" filter** — boolean na svakom paru u JSON-u, toggle u podešavanjima
 - [ ] **Reset settings dugme** u nekom advanced delu
@@ -163,8 +170,8 @@ Prioritet visok ka niskom. Označi `[x]` kad završiš.
 - [ ] **Dodati `family_friendly: true/false` polje na svaki par** u JSON strukturi (sad polako, korisnik može da popunjava)
 
 ### Tehnički housekeeping
-- [ ] **`.gitignore`** za projekat (`.DS_Store`, `node_modules` ako se nekad pojavi, `.vscode/`)
-- [ ] **`favicon.ico`** + `apple-touch-icon` (može privremeni placeholder)
+- [x] **`.gitignore`** za projekat (`.DS_Store`, `node_modules` ako se nekad pojavi, `.vscode/`)
+- [x] **`favicon.ico`** + `apple-touch-icon` — koristi `images/uljez - favicon.png` (500x500px, placeholder do finalnog brenda)
 - [ ] **Performance audit** sa Lighthouse — cilj 95+ na svim metrikama na mobile
 - [ ] **Accessibility audit** — kontrast, screen reader podrška za osnovni navigation, `aria-label` na ikoničkim dugmadima
 
@@ -206,10 +213,10 @@ Prioritet visok ka niskom. Označi `[x]` kad završiš.
 
 - **Ime aplikacije** — privremeno **Uljez** u kodu i UI-u. Finalno ime čeka SEO research u Srbiji.
 - **Tagline** — "Pronađi uljeza" (dogovoreno u sesiji 3)
-- **Hero na main meniju** — samo tipografija, bez logoa (logo dolazi kad se definiše brending)
+- **Hero na main meniju** — logo slika (72px) iznad "Uljez" naslova; logo je i u page-header content stranica (28px centered)
 - **Onboarding** — automatski pri prvom otvaranju (localStorage flag), skipovljiv, dostupan posle preko "Kako se igra" linka
 - **Router** — hash-based (`#/igraj`, `#/privacy` itd.) — ne history API za sad
-- **Verzija** — v0.2.0 posle sesije 3
+- **Verzija** — v0.2.1 posle sesije 4
 - **Kontakt email** — preskočen za sad, dodaje se kasnije
 - **Sadržaj reči** — mainstream + family-friendly kao odvojena kategorija, NE odvažan/psovke
 - **Pismo** — latinica sad, ćirilica kasnije (toggle, opciono)

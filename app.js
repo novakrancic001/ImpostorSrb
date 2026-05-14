@@ -131,6 +131,7 @@ function startGame() {
   state.currentPlayer = 0;
   state.gameScreen = 'preReveal';
   requestWakeLock();
+  triggerPageEnter();
   render();
 }
 
@@ -153,12 +154,14 @@ function nextPlayer() {
   } else {
     state.gameScreen = 'preReveal';
   }
+  triggerPageEnter();
   render();
 }
 
 function showResults() {
   stopTimer();
   state.gameScreen = 'results';
+  triggerPageEnter();
   render();
 }
 
@@ -170,6 +173,7 @@ function newGame(keepSettings = false) {
   state.hint = null;
   state.impostorIndices = [];
   state.currentPlayer = 0;
+  triggerPageEnter();
   render();
 }
 
@@ -221,6 +225,17 @@ function vibrate(pattern) {
 }
 
 // ---------------------------------------------------------------------------
+// Animation helper
+// ---------------------------------------------------------------------------
+
+function triggerPageEnter() {
+  const app = document.getElementById('app');
+  app.classList.remove('page-enter');
+  void app.offsetWidth; // force reflow da bi animacija mogla ponovo da se okine
+  app.classList.add('page-enter');
+}
+
+// ---------------------------------------------------------------------------
 // Router
 // ---------------------------------------------------------------------------
 
@@ -267,6 +282,7 @@ function handleRoute() {
   }
 
   updateMeta(hash);
+  triggerPageEnter();
 
   const app = document.getElementById('app');
   switch (hash) {
@@ -310,6 +326,7 @@ function renderMainMenu(app) {
   app.innerHTML = `
     <section class="screen main-menu">
       <div class="menu-hero">
+        <img src="images/uljez%20-%20favicon.png" alt="Uljez" class="menu-logo">
         <span class="eyebrow">Srpska igra reči</span>
         <h1 class="menu-title display">Uljez</h1>
         <p class="menu-tagline">Pronađi uljeza</p>
@@ -329,7 +346,7 @@ function renderMainMenu(app) {
           <span class="footer-sep">·</span>
           <a href="#/terms">Terms</a>
         </nav>
-        <span class="footer-version">v0.2.0</span>
+        <span class="footer-version">v0.2.1</span>
       </footer>
     </section>
   `;
@@ -421,7 +438,7 @@ function renderContentPage(app, key) {
     <div class="content-page">
       <header class="page-header">
         <a href="#/" class="back-link">← Nazad</a>
-        <span class="page-header-logo">Uljez</span>
+        <img src="images/uljez%20-%20favicon.png" alt="Uljez" class="page-header-logo">
         <span></span>
       </header>
       <div class="content-body">
@@ -703,6 +720,7 @@ function setupHoldToReveal() {
     if (elapsed >= HOLD_DURATION + HOLD_BUFFER) {
       vibrate(50);
       state.gameScreen = 'reveal';
+      triggerPageEnter();
       render();
       return;
     }

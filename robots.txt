@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Zameni [DOMEN] pravim domenom pre deploya
+Sitemap: https://[DOMEN]/sitemap.xml

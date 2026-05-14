@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Napomena: aplikacija koristi hash-based routing (#/igraj, #/privacy, itd.).
+  Hash fragmenti se ne indeksiraju kao zasebne URL-ove od strane pretrazivaca,
+  pa sitemap sadrzi samo jedan unos — glavni URL. Ako predemo na history API
+  routing u buducoj fazi, prosiriti sitemap sa svim rutama.
+
+  Zameni [DOMEN] pravim domenom pre deploya.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://[DOMEN]/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

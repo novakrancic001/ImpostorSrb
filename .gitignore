@@ -1,0 +1,47 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# Editor folderi
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (ako se ikada pojavi)
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build folderi (ne koristimo, ali za svaki slucaj)
+dist/
+build/
+.cache/
+
+# Environment files (ako budemo imali analytics, API kljuceve)
+.env
+.env.local
+.env.*.local
+
+# OS i privremeni fajlovi
+*.log
+*.tmp
+.tmp/
+.temp/
+
+# Lokalna podesavanja za development
+.local/
+*.local

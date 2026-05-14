@@ -3,8 +3,8 @@
 > Živa dokumentacija projekta. **Ažurira se na kraju svake sesije.**
 > CSS je namerno izostavljen — sav style je u `styles.css` sa komentarima po sekcijama.
 
-**Poslednje ažuriranje:** Sesija 3 (Faza 2 — router, main menu, content stranice, SEO, onboarding)
-**Verzija aplikacije:** 0.2.0
+**Poslednje ažuriranje:** Sesija 4 (ispravka animacije prelaza, favicon/logo, SEO fajlovi, .gitignore)
+**Verzija aplikacije:** 0.2.1
 
 ---
 
@@ -55,11 +55,16 @@
 
 ```
 impostor/
-├── index.html          # Entry, učitava fontove, content.js i app.js
+├── index.html          # Entry, učitava fontove, content.js i app.js; sadrži JSON-LD
 ├── styles.css          # Sav stil (organizovan po sekcijama sa komentarima)
-├── app.js              # Sva logika: router, game, onboarding, SEO
+├── app.js              # Sva logika: router, game, onboarding, SEO, animacije
 ├── content.js          # HTML sadržaj za statičke stranice (CONTENT objekat)
 ├── reci.json           # Baza reči, učitava se preko fetch
+├── robots.txt          # SEO crawler direktive
+├── sitemap.xml         # SEO sitemap (jedan unos zbog hash routinga)
+├── .gitignore          # OS, editor, Node fajlovi
+├── images/
+│   └── uljez - favicon.png   # Logo/favicon, 500x500px PNG
 ├── README.md           # User-facing uputstvo za pokretanje
 ├── CLAUDE.md           # Kontekst za Claude Code sesije
 └── dokumentacija/
@@ -218,8 +223,13 @@ Aplikacija koristi **hash-based routing** (`#/igraj`, `#/privacy` itd.). Rute su
 
 Game flow (`preReveal`, `reveal`, `discussion`, `results`) ostaje uvek na `#/igraj` — samo `state.gameScreen` se menja.
 
+### `triggerPageEnter()`
+Dodaje `.page-enter` CSS klasu na `#app` element, čime okida `fadeIn` animaciju. Uklanja klasu pre dodavanja (`void app.offsetWidth` forsira reflow) da bi animacija mogla da se ponovo pokrene. Poziva se samo pri pravim navigacijskim prelazima — ne pri re-renderima istog ekrana.
+
+**Mesta pozivanja:** `handleRoute()`, `startGame()`, `nextPlayer()`, `showResults()`, `newGame()`, i u `setupHoldToReveal` tick-u pri prelasku na `reveal`.
+
 ### `handleRoute()`
-Centralni dispatcher. Čita `window.location.hash`, provera da li je igra aktivna (confirm pre napuštanja), poziva `updateMeta()` i pravi render.
+Centralni dispatcher. Čita `window.location.hash`, provera da li je igra aktivna (confirm pre napuštanja), poziva `updateMeta()`, `triggerPageEnter()` i pravi render.
 
 ```js
 function handleRoute() {
@@ -405,6 +415,15 @@ Escape-uje HTML special characters za bezbedno umetanje u `innerHTML`.
 - Bez izmena koda
 - Dodati CLAUDE.md i DOKUMENTACIJA.md
 - Definisan plan za Fazu 2
+
+### Sesija 4 — v0.2.1
+- **Ispravka animacije prelaza (bug):** uklonjen `animation` sa `.screen` i `.content-page`; dodata `.page-enter` CSS klasa; nova `triggerPageEnter()` funkcija u `app.js` okida animaciju samo pri pravoj navigaciji, ne pri re-renderu istog ekrana
+- **Favicon i logo:** `<link rel="icon">` i `<link rel="apple-touch-icon">` u `index.html`; logo slika (`images/uljez - favicon.png`) dodata na main menu (72px) i u page-header content stranica (28px); dodate CSS klase `.menu-logo` i ažurirana `.page-header-logo`
+- **robots.txt:** kreiran u korenu projekta
+- **sitemap.xml:** kreiran u korenu projekta; komentar objašnjava ograničenje hash routinga
+- **JSON-LD:** dodat `<script type="application/ld+json">` u `<head>` sa `WebApplication` schema
+- **`.gitignore`:** kreiran u korenu projekta
+- **Verzija:** bumped na v0.2.1 u UI
 
 ### Sesija 3 (Faza 2) — v0.2.0
 - **Router:** hash-based routing, `handleRoute()`, zaštita od napuštanja aktivne igre
