@@ -45,3 +45,9 @@ build/
 # Lokalna podesavanja za development
 .local/
 *.local
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
