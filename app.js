@@ -438,7 +438,7 @@ function renderContentPage(app, key) {
     <div class="content-page">
       <header class="page-header">
         <a href="#/" class="back-link">← Nazad</a>
-        <img src="images/uljez%20-%20favicon.png" alt="Uljez" class="page-header-logo">
+        <img src="images/uljez-transparent-favicon.png" alt="Uljez" class="page-header-logo">
         <span></span>
       </header>
       <div class="content-body">
