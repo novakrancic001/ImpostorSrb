@@ -958,6 +958,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .menu-desc {
+  padding-bottom: 10px;
   text-align: center;
   color: var(--text-faint);
   font-size: 0.85rem;
